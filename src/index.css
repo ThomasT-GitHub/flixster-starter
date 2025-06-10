@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #282c34;
 }
 
 button {
@@ -16,4 +16,8 @@ button {
 button:hover {
   background-color: #777;
   color: white;
+}
+
+p, h1, h2, h3 {
+  color:white;
 }

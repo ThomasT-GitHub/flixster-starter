@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  display: flex;
 }
 
 .App-header {
@@ -10,6 +10,29 @@
   justify-content: space-evenly;
   color: white;
   padding: 20px;
+}
+
+.App-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding-left: 50px;
+  width: fit-content;
+  height: 100vh;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+
+.App-sidebar-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.App-page-view {
+  padding-left: 50px;
 }
 
 @media (max-width: 600px) {

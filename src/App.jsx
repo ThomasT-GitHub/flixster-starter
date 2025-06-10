@@ -7,21 +7,23 @@ import './App.css'
 const App = () => {
   return (
     <>
-      <header>
+      <header className="App-header">
         <h1>Flixster</h1>
       </header>
 
-      <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/liked">Liked</NavLink>
-        <NavLink to="/watched">Watched</NavLink>
-      </nav>
+      <section className="App">
+        <nav className="App-sidebar">
+          <NavLink className="App-sidebar-link" to="/">Home</NavLink>
+          <NavLink className="App-sidebar-link" to="/liked">Liked</NavLink>
+          <NavLink className="App-sidebar-link" to="/watched">Watched</NavLink>
+        </nav>
 
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/liked" element={<Liked/>} />
-        <Route path="/watched" element={<Watched/>} />
-      </Routes>
+        <Routes className="App-page-view">
+          <Route path="/" element={<Home/>} />
+          <Route path="/liked" element={<Liked/>} />
+          <Route path="/watched" element={<Watched/>} />
+        </Routes>
+      </section>
     </>
   )
 }
