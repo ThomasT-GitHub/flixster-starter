@@ -10,14 +10,14 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 #### REQUIRED FEATURES
 
-- [ ] **Display Movies**
-  - [ ] Users can view a list of current movies from The Movie Database API in a grid view.
-    - [ ] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
-  - [ ] For each movie displayed, users can see the movie's:
-    - [ ] Title
-    - [ ] Poster image
-    - [ ] Vote average
-  - [ ] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page.
+- [x] **Display Movies**
+  - [x] Users can view a list of current movies from The Movie Database API in a grid view.
+    - [x] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
+  - [x] For each movie displayed, users can see the movie's:
+    - [x] Title
+    - [x] Poster image
+    - [x] Vote average
+  - [x] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page.
 - [ ] **Search Functionality**
   - [ ] Users can use a search bar to search for movies by title.
   - [ ] The search bar should include:
@@ -54,11 +54,11 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
       - [ ] Vote average (descending, highest to lowest)
     - [ ] When a sort option is clicked, movies display in a grid according to selected criterion.
   - [ ] Website displays:
-    - [ ] Header section
+    - [x] Header section
     - [ ] Banner section
     - [ ] Search bar
-    - [ ] Movie grid
-    - [ ] Footer section
+    - [x] Movie grid
+    - [x] Footer section
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
   - [ ] **Deployment**
   - [ ] Website is deployed via Render.
