@@ -1,0 +1,8 @@
+.MovieCardView-movie-list-view {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+    height: fit-content;
+}

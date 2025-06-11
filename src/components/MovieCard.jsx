@@ -9,7 +9,7 @@ const MovieCard = ({posterPath, title, voterAverage}) => {
       <section className="MovieCard">
         <img className="MovieCard-poster"src={moviePosterSource} alt="Movie Poster" />
         <h2 className="MovieCard-title">{title}</h2>
-        <p>{voterAverage}</p>
+        <p>🌟{voterAverage}</p>
         <LikeButton liked={false}/>
         <WatchedButton watched={false}/>
       </section>

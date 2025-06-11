@@ -1,30 +1,38 @@
 import React, { useState, useEffect } from 'react';
-import MovieCard from './MovieCard'
+import MovieCardView from './MovieCardView'
 import './Home.css'
 
 const Home = () => {
     const [movieList, setMovieList] = useState([]);
+    const [movieListPageNumber, setMovieListPageNumber] = useState(1);
 
     useEffect(() => {
         (async () => {
-            const data = await getNowPlayingMovies();
-            setMovieList(data);
+            const data = await getNowPlayingMoviesByPage(movieListPageNumber);
+            setMovieList((prevMovieList) => [...prevMovieList, ...data]) ;
         })();
-    }, []);
+    }, [movieListPageNumber]);
+
+    const handleLoadMoreButton = () => {
+        setMovieListPageNumber(movieListPageNumber + 1);
+    }
 
     return (
         <section className="Home-view">
-        {movieList.map((movie) => {
-            return <MovieCard key={movie.id} posterPath={movie.poster_path} title={movie.title} voterAverage={movie.voter_average}/>
-        })}
+            <MovieCardView movieList={movieList} />
+            <button onClick={handleLoadMoreButton}>Load More!</button>
         </section>
     )
   }
 
   export default Home
 
-  const getNowPlayingMovies = async () => {
-    const url = 'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1';
+  /**
+   * This function returns a page of currently playing movies
+   * @param {number} pageNumber The page to return
+   */
+  const getNowPlayingMoviesByPage = async (pageNumber) => {
+    const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
     const options = {
         method: 'GET',
         headers: {
