@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCard'
+import './Home.css'
 
 const Home = () => {
     const [movieList, setMovieList] = useState([]);
@@ -12,11 +13,11 @@ const Home = () => {
     }, []);
 
     return (
-      <>
+        <section className="Home-view">
         {movieList.map((movie) => {
             return <MovieCard key={movie.id} posterPath={movie.poster_path} title={movie.title} voterAverage={movie.voter_average}/>
         })}
-      </>
+        </section>
     )
   }
 
@@ -27,10 +28,10 @@ const Home = () => {
     const options = {
         method: 'GET',
         headers: {
-            accept: 'application/json',
-            Authorization: `Bearer ${import.meta.env.TMDB_ACESS_TOKEN}`
+          accept: 'application/json',
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
         }
-    };
+      };
 
     try {
         const response = await fetch(url, options);
@@ -39,8 +40,6 @@ const Home = () => {
         }
 
         const data = await response.json();
-
-        console.log(data)
 
         return data.results;
     } catch(error) {
