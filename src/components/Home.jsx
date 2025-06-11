@@ -32,12 +32,14 @@ const Home = () => {
    * @param {number} pageNumber The page to return
    */
   const getNowPlayingMoviesByPage = async (pageNumber) => {
+    const apiToken = import.meta.env.TMDB_ACCESS_TOKEN;
+
     const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
     const options = {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
+          Authorization: `Bearer ${apiToken}`
         }
       };
 
