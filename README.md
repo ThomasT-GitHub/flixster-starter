@@ -18,22 +18,22 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Poster image
     - [x] Vote average
   - [x] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page.
-- [ ] **Search Functionality**
+- [x] **Search Functionality**
   - [ ] Users can use a search bar to search for movies by title.
-  - [ ] The search bar should include:
-    - [ ] Text input field
-    - [ ] Submit/Search button
-    - [ ] Clear button
-  - [ ] Movies with a title containing the search query in the text input field are displayed in a grid view when the user either:
-    - [ ] Presses the Enter key
-    - [ ] Clicks the Submit/Search button
-  - [ ] Users can click the Clear button. When clicked:
-    - [ ] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
+  - [x] The search bar should include:
+    - [x] Text input field
+    - [x] Submit/Search button
+    - [x] Clear button
+  - [x] Movies with a title containing the search query in the text input field are displayed in a grid view when the user either:
+    - [x] Presses the Enter key
+    - [x] Clicks the Submit/Search button
+  - [x] Users can click the Clear button. When clicked:
+    - [x] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
 - [ ] **Design Features**
   - [ ] Website implements all of the following accessibility features:
-    - [ ] Semantic HTML
+    - [x] Semantic HTML
     - [ ] [Color contrast](https://webaim.org/resources/contrastchecker/)
-    - [ ] Alt text for images
+    - [x] Alt text for images
   - [ ] Website implements responsive web design.
     - [ ] Uses CSS Flexbox or CSS Grid
     - [ ] Movie tiles and images shrink/grow in response to window size
@@ -47,21 +47,21 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
       - [ ] Release date
       - [ ] Genres
       - [ ] An overview
-  - [ ] Users can use a drop-down menu to sort movies.
-    - [ ] Drop-down allows movies to be sorted by:
-      - [ ] Title (alphabetic, A-Z)
-      - [ ] Release date (chronologically, most recent to oldest)
-      - [ ] Vote average (descending, highest to lowest)
-    - [ ] When a sort option is clicked, movies display in a grid according to selected criterion.
-  - [ ] Website displays:
+  - [x] Users can use a drop-down menu to sort movies.
+    - [x] Drop-down allows movies to be sorted by:
+      - [x] Title (alphabetic, A-Z)
+      - [x] Release date (chronologically, most recent to oldest)
+      - [x] Vote average (descending, highest to lowest)
+    - [x] When a sort option is clicked, movies display in a grid according to selected criterion.
+  - [x] Website displays:
     - [x] Header section
-    - [ ] Banner section
-    - [ ] Search bar
+    - [x] Banner section
+    - [x] Search bar
     - [x] Movie grid
     - [x] Footer section
     - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
-  - [ ] **Deployment**
-  - [ ] Website is deployed via Render.
+  - [x] **Deployment**
+  - [x] Website is deployed via Render.
   - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
