@@ -3,6 +3,7 @@
     height: 54vh;
     min-height: fit-content;
     max-height: 100px;
+    min-width: 150px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -19,11 +20,11 @@
 }
 
 .MovieCard-title {
-    font-size: 8px;
-    font-size: 1vw;
+    font-size: 16px;
+    font-size: 1vhw;
 }
 
 .MovieCard-voter-average{
-    font-size: 8px;
-    font-size: 1vw;
+    font-size: 16px;
+    font-size: 1vhw;
 }
