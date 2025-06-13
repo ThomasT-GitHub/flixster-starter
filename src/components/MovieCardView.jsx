@@ -9,7 +9,7 @@ const MovieCardView = ({ movieList, setMovieAsLiked, setMovieAsWatched, checkMov
 
     useEffect(() => {
         document.addEventListener("mousedown", (event) => {
-            if (event.target.className === "MovieModal-view")
+            if (event.target.className === "MovieModal-view" || event.target.className === "MovieModal-exit-buton")
                 setIsMovieModalShowing(false);
         });
 

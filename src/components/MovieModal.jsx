@@ -19,6 +19,7 @@ const MovieModal = ({ title, releaseDate, genreIDs, overview, backdropPath, movi
     return (
         <section className="MovieModal-view">
             <section className="MovieModal-content" >
+                <button className="MovieModal-exit-buton" style={{fontSize: "1vw", alignSelf: "flex-start", padding: "10px"}}>X</button>
                 <section className="MovieModal-movie-graphics">
                     <img src={moviePosterSource} alt="Movie Backdrop poster" />
                     <iframe width="400" height="315" src={movieTrailerURL} />
