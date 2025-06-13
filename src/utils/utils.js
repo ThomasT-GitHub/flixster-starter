@@ -3,14 +3,14 @@
  * @param {number} pageNumber The page to return
  */
 export const getNowPlayingMoviesByPage = async (pageNumber) => {
-    const apiToken = import.meta.env.TMDB_ACCESS_TOKEN;
+    const apiToken = `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`;
 
     const url = `https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=${pageNumber}`;
     const options = {
         method: 'GET',
         headers: {
-          accept: 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
+            accept: 'application/json',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
         }
     };
 
@@ -23,8 +23,9 @@ export const getNowPlayingMoviesByPage = async (pageNumber) => {
         const data = await response.json();
 
         return data.results;
-    } catch(error) {
+    } catch (error) {
         console.error(error)
+        return [];
     }
 }
 
@@ -40,8 +41,8 @@ export const getSeachedMoviesByPage = async (pageNumber, movieListSearchQuery) =
     const options = {
         method: 'GET',
         headers: {
-          accept: 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
+            accept: 'application/json',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
         }
     };
 
@@ -54,7 +55,126 @@ export const getSeachedMoviesByPage = async (pageNumber, movieListSearchQuery) =
         const data = await response.json();
 
         return data.results;
-    } catch(error) {
+    } catch (error) {
+        console.error(error)
+        return [];
+    }
+}
+
+/**
+ * This function returns all videos associated with a movie
+ * @param {number} movieID The movie to request
+ */
+export const getMovieVideos = async (movieID) => {
+    const apiToken = `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`;
+
+    const url = `https://api.themoviedb.org/3/movie/${movieID}/videos`;
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            throw new Error("Failed to fetch data!");
+        }
+
+        const data = await response.json();
+
+        return data.results;
+    } catch (error) {
+        console.error(error)
+    }
+}
+
+/**
+ * This function returns the genre a genreID is associated with
+ * @param {number} genreID The genreID to check
+ */
+export const convertGenreIDToGenreString = (genreID) => {
+    const genreIDs = {
+            28: "Action ",
+            12: "Adventure ",
+            16: "Animation ",
+            35: "Comedy ",
+            80: "Crime ",
+            99: "Documentary ",
+            18: "Drama ",
+            10751: "Family ",
+            14: "Fantasy ",
+            36: "History ",
+            27: "Horror ",
+            10402: "Music ",
+            9648: "Mystery ",
+            10749: "Romance ",
+            878: "Science Fiction ",
+            10770: "TV Movie ",
+            53: "Thriller ",
+            10752: "War ",
+            37: "Western"
+    }
+
+    return genreIDs[genreID];
+}
+
+/**
+ * This function returns an array of genres according to an array of genreIDs
+ * @param {number[]} genreID The genreID to check
+ */
+export const convertArrayOfGenreIDsToGenres = (genreIDs) => {
+    let genres = []
+
+    genreIDs.forEach(genreID => {
+        genres.push(convertGenreIDToGenreString(genreID));
+    });
+
+    return genres;
+}
+
+/**
+ * This function returns the trailer associated with a movieID
+ * @param {number} movieID The movie to request
+ */
+export const getMovieTrailer = async (movieID) => {
+    const videos = await getMovieVideos(movieID);
+
+    for (let index = 0; index < videos.length; index++) {
+        if (videos[index].type === "Trailer") {
+            return `https://www.youtube.com/watch?v=${videos[index].key}`
+        }
+    }
+}
+
+/**
+ * This function returns the trailer associated with a movieID
+ * @param {number} movieID The movie to request
+ */
+export const getMovieRuntime = async (movieID) => {
+    const apiToken = `eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`;
+
+    const url = `https://api.themoviedb.org/3/movie/${movieID}`;
+    const options = {
+        method: 'GET',
+        headers: {
+            accept: 'application/json',
+            Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNWNkNWI1ZTg3MzhlNTI1MDRjZjcwN2MxN2JlMWVmOSIsIm5iZiI6MTc0OTUwNjUyNi40MjEsInN1YiI6IjY4NDc1OWRlY2FmMzNhMjE4ZGJiMzRiYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.0TjN0ym2HfLPnXfzCWiZ_fOOJVd5itIaAL2QJriYqok`
+        }
+    };
+
+    try {
+        const response = await fetch(url, options);
+        if (!response.ok) {
+            throw new Error("Failed to fetch data!");
+        }
+
+        const data = await response.json();
+
+        return data.runtime;
+    } catch (error) {
         console.error(error)
     }
 }
