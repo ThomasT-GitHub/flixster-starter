@@ -59,10 +59,10 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Search bar
     - [x] Movie grid
     - [x] Footer section
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
+    - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
   - [x] **Deployment**
   - [x] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
+  - [x] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
 
@@ -100,7 +100,10 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 ### Walkthrough Video
 
-
+<a href="https://www.loom.com/share/YOUR_VIDEO_ID">
+   <p>Project video title</p>
+   <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-with-play.gif">
+</a>
 
 ### Reflection
 
@@ -121,7 +124,5 @@ I did not demo the project.
 I used the (React Router)[https://reactrouter.com/] to make changing between "Home", "Liked", and "Watched" an easy process.
 
 ### Shout out
-
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 
 Kevin and Jackson provided great help with the responsive design by giving me pointers to what CSS properties to look at in order to implement the responsiveness of the website. My intern peers, Chinmay and Heath, and intern manager, Karan, also provided amazing code review on project 1 which allowed me to approach project 2 with an improved approach to the design and layout of the project, such as implementing more modular design and more robust naming practices.
