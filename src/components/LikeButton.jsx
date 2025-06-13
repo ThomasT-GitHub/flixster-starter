@@ -18,7 +18,7 @@ const LikedButton = ({ movieID, setMovieAsLiked, checkMovieLikedStatus }) => {
 
     return (
         <button onClick={handleLikeButtonClick} style={{backgroundColor: 'white'}}>
-            <img src={liked ? likedIcon : unlikedIcon} alt="Like Button Icon" style={{display: 'flex', justifySelf: 'center', height: "4vh", width: "2vw"}}/>
+            <img src={liked ? likedIcon : unlikedIcon} alt="Like Button Icon" style={{display: 'flex', justifySelf: 'center', width: "1.5vw"}}/>
         </button>
     )
 }

@@ -18,7 +18,7 @@ const WatchedButton = ({ movieID, setMovieAsWatched, checkMovieWatchedStatus }) 
 
     return (
         <button onClick={handleWatchedButtonClick} style={{backgroundColor: 'white'}}>
-            <img src={watched ? watchedIcon : unwatchedIcon} alt="Watched Button Icon" style={{display: 'flex', justifySelf: 'center', height: "4vh", width: "2vw"}}/>
+            <img src={watched ? watchedIcon : unwatchedIcon} alt="Watched Button Icon" style={{display: 'flex', justifySelf: 'center', width: "1.5vw"}}/>
         </button>
     )
 }
