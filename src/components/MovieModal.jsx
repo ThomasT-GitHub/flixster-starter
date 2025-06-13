@@ -21,7 +21,7 @@ const MovieModal = ({ title, releaseDate, genreIDs, overview, backdropPath, movi
             <section className="MovieModal-content" >
                 <section className="MovieModal-movie-graphics">
                     <img src={moviePosterSource} alt="Movie Backdrop poster" />
-
+                    <iframe width="400" height="315" src={movieTrailerURL} />
                 </section>
 
                 <section className="MovieModal-movie-information">

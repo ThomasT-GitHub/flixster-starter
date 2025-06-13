@@ -1,16 +1,29 @@
 .MovieCard {
-    width: 200px;
-    height: 400px;
-
+    width: 12.5vw;
+    height: 54vh;
+    min-height: fit-content;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex;
     text-align: center;
 
+
+
     margin: 32px;
-    background: #2e3239;
+    background-color: rgb(54, 0, 61);
 
     border-radius: 16px;
     overflow: hidden;
+}
+
+.MovieCard-title {
+    font-size: 8px;
+    font-size: 1vw;
+}
+
+.MovieCard-voter-average{
+    font-size: 8px;
+    font-size: 1vw;
 }

@@ -8,10 +8,18 @@
     overflow: auto;
     background-color: rgba(0,0,0,0.4);
  }
+
  .MovieModal-content {
     background-color: #282c34;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+ .MovieModal-movie-information {
+    padding-left: 20px;
  }

@@ -2,7 +2,7 @@
 
 Submitted by: **Thomas Trivino**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **20** hours spent in total
 
 Deployed Application (**required**): [Flixster Deployed Site](https://flixster-starter-n7i9.onrender.com)
 
@@ -29,20 +29,20 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
     - [x] Clicks the Submit/Search button
   - [x] Users can click the Clear button. When clicked:
     - [x] Most recent search results are cleared from the text input field and the grid view and all current movies are displayed in a grid view
-- [ ] **Design Features**
-  - [ ] Website implements all of the following accessibility features:
+- [x] **Design Features**
+  - [x] Website implements all of the following accessibility features:
     - [x] Semantic HTML
-    - [ ] [Color contrast](https://webaim.org/resources/contrastchecker/)
+    - [x] [Color contrast](https://webaim.org/resources/contrastchecker/)
     - [x] Alt text for images
-  - [ ] Website implements responsive web design.
+  - [x] Website implements responsive web design.
     - [x] Uses CSS Flexbox or CSS Grid
-    - [ ] Movie tiles and images shrink/grow in response to window size
+    - [x] Movie tiles and images shrink/grow in response to window size
   - [x] Users can click on a movie tile to view more details about a movie in a pop-up modal.
     - [x] The pop-up window is centered in the screen and does not occupy the entire screen.
     - [x] The pop-up window has a shadow to show that it is a pop-up and appears floating on the screen.
     - [x] The backdrop of the pop-up appears darker or in a different shade than before. including:
-    - [ ] The pop-up displays additional details about the moving including:
-      - [ ] Runtime in minutes
+    - [x] The pop-up displays additional details about the moving including:
+      - [x] Runtime in minutes
       - [x] Backdrop poster
       - [x] Release date
       - [x] Genres
@@ -67,9 +67,9 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 #### STRETCH FEATURES
 
 
-- [ ] **Embedded Movie Trailers**
-  - [ ] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
-    - [ ] When the trailer is clicked, users can play the movie trailer.
+- [x] **Embedded Movie Trailers**
+  - [x] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
+    - [x] When the trailer is clicked, users can play the movie trailer.
 - [x] **Favorite Button**
   - [x] For each movie displayed, users can favorite the movie.
   - [x] There should be visual element (such as a heart icon) on each movie's tile to show whether or not the movie has been favorited.
@@ -88,15 +88,15 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
   - [x] If the movie is already watched:
     - [x] Clicking on the visual element should mark the movie as *not* watched.
     - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
-- [ ] **Sidebar**
+- [x] **Sidebar**
   - [x] The website includes a side navigation bar.
   - [x] The sidebar has three pages:
     - [x] Home
     - [x] Favorites
     - [x] Watched
   - [x] The Home page displays all current movies in a grid view, the search bar, and the sort movies drop-down.
-  - [ ] The Favorites page displays all favorited movies in a grid view.
-  - [ ] The Watched page displays all watched movies in a grid view.
+  - [x] The Favorites page displays all favorited movies in a grid view.
+  - [x] The Watched page displays all watched movies in a grid view.
 
 ### Walkthrough Video
 
@@ -106,20 +106,22 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+The topics in the lab definitely helped prepare me for this assignment. In particular, the topics about useEffect, API fetching, and useState equipped me to handle the challenges presented by this project.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+I would have invested more time into planning the proper CSS for the website. When I had to make the website responsive towards the end, I struggled to find the best way to implement the CSS. I feel if I had taken more time to plan ahead for the responsive design the CSS would have been simpler.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I did not demo the project.
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+I used the (React Router)[https://reactrouter.com/] to make changing between "Home", "Liked", and "Watched" an easy process.
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+
+Kevin and Jackson provided great help with the responsive design by giving me pointers to what CSS properties to look at in order to implement the responsiveness of the website. My intern peers, Chinmay and Heath, and intern manager, Karan, also provided amazing code review on project 1 which allowed me to approach project 2 with an improved approach to the design and layout of the project, such as implementing more modular design and more robust naming practices.

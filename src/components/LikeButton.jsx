@@ -1,19 +1,26 @@
-import {useState} from 'react'
+import { useState, useEffect } from 'react'
 import likedIcon from '../assets/liked_heart.svg'
 import unlikedIcon from '../assets/unliked_heart.svg'
 
-const LikedButton = () => {
+const LikedButton = ({ movieID, setMovieAsLiked, checkMovieLikedStatus }) => {
     const [liked, setLiked] = useState(false);
 
-    const handleLikeButtonClick = () => {
+    useEffect(() => {
+        setLiked(checkMovieLikedStatus(movieID));
+    }, []);
+
+    const handleLikeButtonClick = (event) => {
+        event.stopPropagation();
         setLiked(!liked);
+
+        setMovieAsLiked(movieID);
     }
 
     return (
-        <button onClick={handleLikeButtonClick}>
-            <img src={ liked ? likedIcon : unlikedIcon} alt="Like Button Icon" width="40px"/>
+        <button onClick={handleLikeButtonClick} style={{backgroundColor: 'white'}}>
+            <img src={liked ? likedIcon : unlikedIcon} alt="Like Button Icon" style={{display: 'flex', justifySelf: 'center', height: "4vh", width: "2vw"}}/>
         </button>
     )
-  }
+}
 
 export default LikedButton

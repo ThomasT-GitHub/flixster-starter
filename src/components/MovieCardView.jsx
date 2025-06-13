@@ -3,7 +3,7 @@ import MovieModal from './MovieModal'
 import { useEffect, useState } from 'react'
 import './MovieCardView.css'
 
-const MovieCardView = ({ movieList }) => {
+const MovieCardView = ({ movieList, setMovieAsLiked, setMovieAsWatched, checkMovieWatchedStatus, checkMovieLikedStatus }) => {
     const [movieCardInfo, setMovieCardInfo] = useState({});
     const [isMovieModalShowing, setIsMovieModalShowing] = useState(false);
 
@@ -28,7 +28,8 @@ const MovieCardView = ({ movieList }) => {
                         overview={movie.overview} posterPath={movie.poster_path}
                         movieID={movie.id} backdropPath={movie.backdrop_path}
                         voterAverage={movie.vote_average} setMovieCardInfo={setMovieCardInfo}
-                        setIsMovieModalShowing={setIsMovieModalShowing}
+                        setIsMovieModalShowing={setIsMovieModalShowing} setMovieAsWatched={setMovieAsWatched}
+                        setMovieAsLiked={setMovieAsLiked} checkMovieWatchedStatus={checkMovieWatchedStatus} checkMovieLikedStatus={checkMovieLikedStatus}
                     />
                 })}
             </section>

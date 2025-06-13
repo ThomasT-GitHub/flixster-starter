@@ -3,13 +3,21 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgb(54, 0, 61);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   color: white;
   padding: 20px;
+}
+
+.App-banner {
+  background-color: rgb(54, 0, 61);
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: space-evenly;
 }
 
 .App-sidebar {
@@ -48,4 +56,15 @@
   .search-bar form {
     flex-direction: column;
   }
+}
+
+footer {
+  align-self: center;
+  justify-self: center;
+
+  background-color: rgb(54, 0, 61);
+}
+
+h1 {
+  font-size: 5em;
 }
