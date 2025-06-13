@@ -196,7 +196,7 @@ export const sortMovieListAlphabetically = (movieList, setMovieList) => {
  * @param {useState} setMovieList Setter for movieList
  */
 export const sortMovieListChronologically = (movieList, setMovieList) => {
-    const sortedMovieList = [...movieList].sort((a, b) => a.release_date.localeCompare(b.release_date));
+    const sortedMovieList = [...movieList].sort((a, b) => b.release_date.localeCompare(a.release_date));
     setMovieList(sortedMovieList);
 }
 
