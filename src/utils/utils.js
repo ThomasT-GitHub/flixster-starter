@@ -10,7 +10,7 @@ export const getNowPlayingMoviesByPage = async (pageNumber) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${import.meta.apiToken}}`
+            Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}}`
 
         }
     };
@@ -43,7 +43,7 @@ export const getSeachedMoviesByPage = async (pageNumber, movieListSearchQuery) =
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${import.meta.apiToken}}`
+            Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}}`
         }
     };
 
@@ -74,7 +74,7 @@ export const getMovieVideos = async (movieID) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${import.meta.apiToken}}`
+            Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}}`
         }
     };
 
@@ -162,7 +162,7 @@ export const getMovieRuntime = async (movieID) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: `Bearer ${import.meta.apiToken}}`
+            Authorization: `Bearer ${import.meta.env.VITE_TMDB_API_TOKEN}}`
         }
     };
 
