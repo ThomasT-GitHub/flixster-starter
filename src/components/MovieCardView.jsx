@@ -22,8 +22,8 @@ const MovieCardView = ({ movieList, setMovieAsLiked, setMovieAsWatched, checkMov
     return (
         <>
             <section className="MovieCardView-movie-list-view">
-                {movieList.map((movie) => {
-                    return <MovieCard key={movie.id} title={movie.title}
+                {movieList.map((movie, index) => {
+                    return <MovieCard key={index} title={movie.title}
                         releaseDate={movie.release_date} genres={movie.genre_ids}
                         overview={movie.overview} posterPath={movie.poster_path}
                         movieID={movie.id} backdropPath={movie.backdrop_path}
