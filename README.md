@@ -100,7 +100,7 @@ Deployed Application (**required**): [Flixster Deployed Site](https://flixster-s
 
 ### Walkthrough Video
 
-<a href="https://www.loom.com/share/YOUR_VIDEO_ID">
+<a href="https://www.loom.com/share/656aa971a1304eab8015208ee5a697f1?sid=4cbaf528-90a0-4ac0-a1cc-64b5bd737f39">
    <p>Project video title</p>
    <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/YOUR_VIDEO_ID-with-play.gif">
 </a>
@@ -121,7 +121,7 @@ I did not demo the project.
 
 ### Open-source libraries used
 
-I used the (React Router)[https://reactrouter.com/] to make changing between "Home", "Liked", and "Watched" an easy process.
+I used the [React Router](https://reactrouter.com/) to make changing between "Home", "Liked", and "Watched" an easy process.
 
 ### Shout out
 
